@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>윤영 Yoon Young</title>
+<meta name="description" content="윤영(Yoon Young) — 교육학 연구자, Instructional Designer">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<style>
+/* Layout: top bar, a bright hero with highlighter-marked headline, then alternating white and sky-tinted bands of cards. */
+:root{
+  --bg:#ffffff; --band:#eef5fe; --card:#ffffff; --fg:#0f1b33; --muted:#51607a; --line:#d9e3f2;
+  --accent:#1a5fd0; --accent-soft:#dfeafc; --hi:#ffe066; --mint:#0d8a6a; --mint-soft:#dcf5ec;
+  --font:"Manrope","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d1424; --band:#131d33; --card:#18243d; --fg:#eaf0fb; --muted:#a3b2cc; --line:#2a3957;
+  --accent:#7fb0ff; --accent-soft:#1d3157; --hi:#6b5a10; --mint:#5fd6b3; --mint-soft:#143a30; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1424; --band:#131d33; --card:#18243d; --fg:#eaf0fb; --muted:#a3b2cc; --line:#2a3957;
+  --accent:#7fb0ff; --accent-soft:#1d3157; --hi:#6b5a10; --mint:#5fd6b3; --mint-soft:#143a30; color-scheme:dark}
+:root:not([data-lang="en"]) .en{display:none}
+:root[data-lang="en"] .ko{display:none}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:16px;line-height:1.7;word-break:keep-all}
+.in{max-width:1040px;margin-inline:auto;padding-inline:20px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .in{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;padding-block:12px}
+.brand{font-weight:800;font-size:1.05rem;margin-right:auto}
+nav{display:flex;flex-wrap:wrap;gap:4px 18px}
+nav a{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:500}
+nav a:hover{color:var(--accent)}
+button{font:inherit;cursor:pointer}
+.lang{font-size:.82rem;font-weight:700;background:var(--accent);color:var(--bg);border:0;border-radius:999px;padding:6px 14px}
+.hero{background:var(--band)}
+.hero .in{padding-block:56px 48px;display:flex;flex-direction:column;gap:20px}
+.eyebrow{margin:0;font-size:.88rem;font-weight:700;color:var(--accent);letter-spacing:.02em}
+h1{margin:0;font-weight:900;font-size:clamp(1.8rem,5vw,3rem);line-height:1.3;text-wrap:balance;max-width:20em}
+mark{background:linear-gradient(transparent 58%,var(--hi) 58%);color:inherit;padding-inline:2px}
+p{margin:0;max-width:64ch}
+.hero p.sub{font-size:1.05rem;color:var(--muted)}
+.facts{margin:8px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.facts div{background:var(--card);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:2px}
+.facts dt{font-size:.78rem;font-weight:700;color:var(--accent)}
+.facts dd{margin:0;font-weight:700;font-size:.95rem}
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-weight:700}
+.mail code{font-family:inherit;user-select:all}
+.copy{font-size:.8rem;font-weight:700;background:var(--card);color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:3px 12px}
+section .in{padding-block:52px;display:flex;flex-direction:column;gap:22px}
+section.tint{background:var(--band)}
+section{scroll-margin-top:64px}
+h2{margin:0;font-weight:900;font-size:1.6rem;line-height:1.3;text-wrap:balance}
+h2 small{display:block;font-size:.88rem;font-weight:500;color:var(--muted);margin-top:4px}
+h3{margin:0;font-size:1rem;font-weight:700}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card h3{color:var(--accent)}
+ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:5px}
+li{font-size:.93rem}
+.note{font-size:.85rem;color:var(--muted)}
+.nums{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.nums div{background:var(--card);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:4px}
+.nums dd{margin:0;font-weight:800;font-size:1.3rem;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1.35}
+.nums dt{font-size:.86rem;color:var(--muted);order:2}
+.group{display:flex;flex-direction:column;gap:6px}
+.pubs{list-style:none;padding:0;gap:0}
+.pubs li{padding:12px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.pubs em{font-style:normal;color:var(--muted);font-size:.88rem}
+.chip{display:inline-block;font-size:.74rem;font-weight:700;padding:1px 9px;border-radius:999px;background:var(--accent-soft);color:var(--accent);margin-right:6px;white-space:nowrap}
+.chip.m{background:var(--mint-soft);color:var(--mint)}
+.rows{display:flex;flex-direction:column}
+.row{display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.when{color:var(--accent);font-weight:700;font-size:.88rem;font-variant-numeric:tabular-nums}
+.what{display:flex;flex-direction:column;gap:2px;min-width:0}
+.what b{font-weight:700}
+.what span{font-size:.92rem;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-size:.85rem;font-weight:500;background:var(--accent-soft);color:var(--fg);border-radius:999px;padding:4px 12px}
+footer .in{padding-block:28px;font-size:.82rem;color:var(--muted);border-top:1px solid var(--line)}
+@media (max-width:640px){
+  .row{grid-template-columns:minmax(0,1fr);gap:2px}
+  .hero .in{padding-block:36px}
+  section .in{padding-block:38px}
+  header{position:static}
+}
+</style>
+</head>
+<body>
+<header><div class="in">
+  <div class="brand"><span class="ko">윤영</span><span class="en">Yoon Young</span></div>
+  <nav>
+    <a href="#work"><span class="ko">현재 업무</span><span class="en">Work</span></a>
+    <a href="#results"><span class="ko">성과</span><span class="en">Results</span></a>
+    <a href="#research"><span class="ko">연구</span><span class="en">Research</span></a>
+    <a href="#teaching"><span class="ko">강의</span><span class="en">Teaching</span></a>
+    <a href="#career"><span class="ko">경력</span><span class="en">Career</span></a>
+    <a href="#education"><span class="ko">최종학력</span><span class="en">Education</span></a>
+    <a href="#credentials"><span class="ko">자격</span><span class="en">Credentials</span></a>
+  </nav>
+  <button class="lang" id="lang-toggle" type="button">English</button>
+</div></header>
+
+<div class="hero" id="about"><div class="in">
+  <p class="eyebrow"><span class="ko">Instructional Designer · 교육학 연구자 · Ph.D.</span><span class="en">Instructional Designer · Education Researcher · Ph.D.</span></p>
+  <h1 class="ko">기술이 깊어질수록, <mark>사람을 키우는 교육</mark>을 설계합니다.</h1>
+  <h1 class="en">The deeper technology goes, the more I design <mark>education that grows people</mark>.</h1>
+  <p class="sub ko">학습자의 웰빙과 역량이 함께 자라는 수업, 그리고 그 수업을 이끌 교사와 교수자의 성장을 연구하고 지원합니다. 유아 교실에서 대학 강의실까지, 데이터로 확인하며 설계해 왔습니다. 현재 한동대학교 HI교육혁신원 전임연구원입니다.</p>
+  <p class="sub en">I study and support courses in which learners' well-being and competencies grow together, and the growth of the teachers and faculty who lead them. From early childhood classrooms to university lecture halls, I design with data. I currently work at the HI Center for Educational Innovation, Handong Global University.</p>
+  <div class="mail"><code id="email">serena.yoon02@gmail.com</code><button class="copy" id="copy-email" type="button"><span class="ko">복사</span><span class="en">Copy</span></button></div>
+  <dl class="facts">
+    <div><dt><span class="ko">학위</span><span class="en">Degree</span></dt><dd><span class="ko">서울대학교 박사</span><span class="en">Ph.D., Seoul National University</span></dd></div>
+    <div><dt><span class="ko">대학 강의</span><span class="en">University teaching</span></dt><dd><span class="ko">서울대 8년 · 중부대 2년 · 동국대 1년</span><span class="en">SNU 8 yrs · Joongbu 2 · Dongguk 1</span></dd></div>
+    <div><dt><span class="ko">학술지 논문</span><span class="en">Journal articles</span></dt><dd><span class="ko">10편 (1저자 5, 교신 4)</span><span class="en">10 (5 first, 4 corresponding)</span></dd></div>
+    <div><dt><span class="ko">분석 방법</span><span class="en">Methods</span></dt><dd><span class="ko">SEM · LPA/LTA · 델파이</span><span class="en">SEM · LPA/LTA · Delphi</span></dd></div>
+  </dl>
+</div></div>
+
+<section id="work"><div class="in">
+  <h2><span class="ko">현재 업무</span><span class="en">Current work</span><small><span class="ko">한동대학교 HI교육혁신원 · 2025.11–현재</span><span class="en">Handong Global University · Nov 2025–present</span></small></h2>
+  <div class="cards">
+    <div class="card"><h3><span class="ko">교수학습모형과 교수설계</span><span class="en">Instructional design</span></h3>
+      <ul class="ko"><li>Active Learning과 Adaptive Learning을 통합한 HTHT 교수학습모형 개발 및 교과목 적용</li><li>학습목표–학습활동–평가 정렬에 기반한 교과목 설계와 교수자 맞춤형 컨설팅</li><li>Phase A–C 개발 프로세스, 설계 템플릿, 평가도구 개발</li></ul>
+      <ul class="en"><li>Developing and applying the HTHT (High Tech–High Touch) model that integrates active and adaptive learning</li><li>Course design and faculty consulting based on alignment of objectives, activities, and assessment</li><li>Phase A–C development process, design templates, and evaluation tools</li></ul></div>
+    <div class="card"><h3><span class="ko">교육 효과성 평가와 연구</span><span class="en">Evaluation and research</span></h3>
+      <ul class="ko"><li>HTHT 수업 평가를 위한 C-I-P-O 프레임워크 개발 연구</li><li>전문가 델파이 조사 설계·운영, 내용타당도 분석</li><li>사전·사후 조사, 수업 관찰, 학습성과 데이터 분석과 IRB 절차 관리</li></ul>
+      <ul class="en"><li>C-I-P-O (Context–Intervention–Process–Outcome) framework for evaluating HTHT courses</li><li>Design and operation of expert Delphi surveys; content validity analysis</li><li>Pre/post surveys, class observation, learning outcome analysis, IRB management</li></ul></div>
+    <div class="card"><h3><span class="ko">국제 공동연구 (ASU)</span><span class="en">International collaboration (ASU)</span></h3>
+      <ul class="ko"><li>Arizona State University와 HTHT 기반 대학 교육모형 공동개발</li><li>Python Programming, ESG and Sustainability 프로토타입 교과목 개발 협력과 운영 분석</li></ul>
+      <ul class="en"><li>Joint development of an HTHT-based university education model with Arizona State University</li><li>Prototype courses: Python Programming; ESG and Sustainability</li></ul></div>
+    <div class="card"><h3><span class="ko">AI·에듀테크 기반 교육혁신</span><span class="en">AI and educational technology</span></h3>
+      <ul class="ko"><li>생성형 AI와 디지털 학습도구를 활용한 교수학습 혁신 전략 연구</li><li>AI 영어학습 도구(PLANG), Canvas LMS 활용 교과목의 운영·효과성 분석</li></ul>
+      <ul class="en"><li>Research on teaching and learning strategies using generative AI and digital tools</li><li>Effectiveness analysis of courses using an AI English-learning tool (PLANG) and Canvas LMS</li></ul></div>
+    <div class="card"><h3><span class="ko">교수자 역량 강화</span><span class="en">Faculty development</span></h3>
+      <ul class="ko"><li>HI-4C, HTHT, Active Learning 교수법 워크숍 기획·운영</li><li>교수자별 교과목 개발 컨설팅과 설계 개선 피드백</li></ul>
+      <ul class="en"><li>Planning and running workshops on HI-4C, HTHT, and active learning</li><li>Individual course-development consulting and design feedback</li></ul></div>
+    <div class="card"><h3><span class="ko">교육혁신 사업 기획·운영</span><span class="en">Program management</span></h3>
+      <ul class="ko"><li>글로컬대학사업 연계 HI-4C·HI-HTHT 프로그램 기획·운영과 성과관리</li><li>일정·예산·성과지표 관리, 연차 계획과 성과보고서 작성</li></ul>
+      <ul class="en"><li>Planning, operating, and managing outcomes of HI-4C and HI-HTHT programs under the Glocal University project</li><li>Schedule, budget, and KPI management; annual plans and reports</li></ul></div>
+  </div>
+</div></section>
+
+<section id="results" class="tint"><div class="in">
+  <h2><span class="ko">담당 사업 성과</span><span class="en">Program results</span><small><span class="ko">담당 사업의 운영·연구 성과이며, 조직 공동 실적을 포함합니다.</span><span class="en">Results of the programs I work on, including team outcomes.</span></small></h2>
+  <dl class="nums">
+    <div><dd><span class="ko">6개 교과목 · 324명</span><span class="en">6 courses · 324 students</span></dd><dt><span class="ko">4C 기반 교과목 개발·운영</span><span class="en">4C-based courses developed and run</span></dt></div>
+    <div><dd><span class="ko">60건 · 635명</span><span class="en">60 items · 635 students</span></dd><dt><span class="ko">HTHT 교육 콘텐츠</span><span class="en">HTHT learning content</span></dt></div>
+    <div><dd><span class="ko">42건 · 206명</span><span class="en">42 items · 206 students</span></dd><dt><span class="ko">HI-4C 교육 콘텐츠</span><span class="en">HI-4C learning content</span></dt></div>
+    <div><dd><span class="ko">4회 · 58명 · 4.73점</span><span class="en">4 sessions · 58 · 4.73</span></dd><dt><span class="ko">교수법 워크숍 (2026 상반기, 참여자, 만족도)</span><span class="en">Teaching workshops (first half of 2026; participants; satisfaction)</span></dt></div>
+    <div><dd><span class="ko">82문항 · 619명</span><span class="en">82 items · n = 619</span></dd><dt><span class="ko">HI 핵심역량 진단도구 (4역량 15요인)</span><span class="en">HI core competency instrument (4 competencies, 15 factors)</span></dt></div>
+    <div><dd><span class="ko">전문가 8명 · 2차</span><span class="en">8 experts · 2 rounds</span></dd><dt><span class="ko">HTHT 평가 프레임워크 델파이</span><span class="en">Delphi study for the HTHT evaluation framework</span></dt></div>
+    <div><dd><span class="ko">2개 교과목</span><span class="en">2 courses</span></dd><dt><span class="ko">ASU 공동개발 프로토타입</span><span class="en">Prototypes co-developed with ASU</span></dt></div>
+    <div><dd><span class="ko">42개 KPI</span><span class="en">42 KPIs</span></dd><dt><span class="ko">PDCA–CIPP 연계 모니터링 체계</span><span class="en">PDCA–CIPP monitoring system</span></dt></div>
+  </dl>
+</div></section>
+
+<section id="research"><div class="in">
+  <h2><span class="ko">연구</span><span class="en">Research</span></h2>
+  <div class="group"><h3><span class="ko">진행 중</span><span class="en">In preparation</span></h3>
+  <ul class="pubs">
+    <li><span class="chip m"><span class="ko">단독 · 가제</span><span class="en">Sole author · working title</span></span>Yoon, Y. Design orientation and reported practice: A document analysis of AI and technology integration in adaptive and active learning course designs in higher education.<br><em><span class="ko">대학 교수자의 교수설계 최종보고서를 분석해 설계 지향과 AI·테크놀로지 활용의 정합성을 검토하는 연구</span><span class="en">A document analysis of faculty course-design reports, examining alignment between design orientation and AI and technology use.</span></em></li>
+    <li><span class="chip m"><span class="ko">연구책임자</span><span class="en">Principal investigator</span></span>Yoon, Y. (PI), Moon, E. Y., Yeon, E., &amp; Lim, S. Conceptualizing conversational AI reliance in learning through AI support roles and functional allocation across learning processes.<br><em><span class="ko">대학생의 대화형 AI 학습의존 개념화: 학습과정별 AI 지원 역할과 기능 배분을 중심으로 · 공동연구: 문은영, 연의송, 임수영</span><span class="en">Conceptualization study based on literature analysis and focus group interviews with university students.</span></em></li>
+    <li><span class="chip m"><span class="ko">연구책임자 · 가제</span><span class="en">Principal investigator · working title</span></span>Yoon, Y. (PI), Moon, E. Y., Yeon, E., &amp; Lim, S. Development and validation of a conversational AI learning dependence scale for university students.<br><em><span class="ko">대학생 대화형 AI 학습의존 척도 개발 및 타당화 · 공동연구: 문은영, 연의송, 임수영</span><span class="en">Scale development and validation study following the conceptualization study.</span></em></li>
+  </ul></div>
+  <div class="group"><h3><span class="ko">투고 중</span><span class="en">Under review</span></h3>
+  <ul class="pubs">
+    <li>Moon, E. Y., Yoon, Y., &amp; Yeon, E. (2026). From middle to high school: Academic motivation, teacher and peer relationships, and later life-domain values. <em>Manuscript submitted for publication.</em></li>
+    <li>Moon, E. Y., Yoon, Y., &amp; Yeon, E. (2026). Latent transitions in middle school students' creative thinking competency: The effect of learning motivation and high-touch learning environment. <em>Manuscript submitted for publication.</em></li>
+  </ul></div>
+  <div class="group"><h3><span class="ko">학술지 논문</span><span class="en">Journal articles (titles in the original Korean)</span></h3>
+  <ul class="pubs">
+    <li><span class="chip">교신</span>역량 중심 학부모교육을 위한 학부모 역량모형 개발 연구. <em>학부모연구, 2025.</em></li>
+    <li><span class="chip">1저자</span>대학생의 생애목표 유형 분석과 진로의식 및 대학생활적응과의 관계 탐색. <em>교육연구소, 2021.</em></li>
+    <li><span class="chip">1저자</span>고등학생의 정신적 웰빙 영향요인 탐색: 랜덤포레스트를 활용하여. <em>열린교육연구, 2021.</em></li>
+    <li><span class="chip">1저자</span>윤영, 최은영. 초등학교 고학년 학생의 정신건강 유형에 따른 생활시간 활용의 차이. <em>교육심리연구, 35(2), 319–342, 2021.</em></li>
+    <li><span class="chip">1저자</span>고등학생의 자기관리역량과 공동체역량 관계에 대인관계 및 배려의 매개효과 검증: 성별 차이를 중심으로. <em>한국청소년학회, 2021.</em></li>
+    <li><span class="chip">1저자</span>고등학생의 성별에 따른 공동체 역량 예측변인 탐색: 랜덤 포레스트를 활용하여. <em>청소년학연구, 2021.</em></li>
+    <li><span class="chip">교신</span>중학생의 부모지원과 진로성숙도 간의 관계에서 자기효능감과 자기조절전략의 매개효과: 성별에 따른 차이를 중심으로. <em>한국교육학회, 2021.</em></li>
+    <li><span class="chip">교신</span>중학생의 사회적 관계와 학업성취도 간의 관계에서 그릿과 학업열의의 매개효과와 성별의 조절효과. <em>한국교육심리학회, 2021.</em></li>
+    <li><span class="chip">교신</span>조은별, 윤영, 신종호. 대학생의 생애목표 유형에 따른 대학생활적응의 차이: 목표 내용의 사회적 수준을 중심으로. <em>한국교육문제연구, 37(3), 101–125, 2019.</em></li>
+    <li><span class="chip">공동</span>초등학생의 지각된 인기가 친사회적 행동에 미치는 영향: 또래 연결망 구조의 조절효과. <em>아시아교육연구, 2017.</em></li>
+  </ul></div>
+  <div class="group"><h3><span class="ko">연구보고서 · 저서 · 학술대회</span><span class="en">Reports, book, conference</span></h3>
+  <ul class="pubs">
+    <li><span class="chip">보고서</span>역량 중심 성장형 학부모교육 프레임워크 개발 연구. <em>교육부, 2024.</em></li>
+    <li><span class="chip">보고서</span>한국의 미래교육을 대비한 '미래 학부모' 핵심 역량 연구. <em>교육부, 2020.</em></li>
+    <li><span class="chip">저서</span>폭력없는 행복학교 만들기. <em>학지사, 2018. (공저)</em></li>
+    <li><span class="chip">학술대회</span>초·중등학교 학부모의 '미래학부모역량' 요소 도출과 진단. <em>가정과삶의질학회, 2021. (1저자)</em></li>
+  </ul></div>
+  <div class="group"><h3><span class="ko">학위논문</span><span class="en">Theses</span></h3>
+  <ul class="pubs">
+    <li><span class="chip">박사</span>초·중등학생의 친사회행동 발현을 위한 부모역량모형 개발. <em>서울대학교, 2020.</em></li>
+    <li><span class="chip">석사</span>교사와 학부모의 인성교육에 대한 인식 일치도 및 효과 연구. <em>서울대학교, 2011.</em></li>
+  </ul></div>
+</div></section>
+
+<section id="teaching" class="tint"><div class="in">
+  <h2><span class="ko">강의</span><span class="en">Teaching</span><small><span class="ko">담당 과목: 교육심리, 학교폭력예방 및 학생의 이해</span><span class="en">Courses: Educational Psychology; School Violence Prevention and Understanding Students</span></small></h2>
+  <div class="cards">
+    <div class="card"><h3><span class="ko">서울대학교 교육학과</span><span class="en">Seoul National University, Dept. of Education</span></h3><span class="note"><span class="ko">강사 · 8년 · 교직필수 과목</span><span class="en">Lecturer · 8 years · required teacher-education courses</span></span></div>
+    <div class="card"><h3><span class="ko">중부대학교 유아교육학과</span><span class="en">Joongbu University, Dept. of Early Childhood Education</span></h3><span class="note"><span class="ko">강사 · 2년 · 교직필수 과목</span><span class="en">Lecturer · 2 years · required teacher-education courses</span></span></div>
+    <div class="card"><h3><span class="ko">동국대학교 교육학과</span><span class="en">Dongguk University, Dept. of Education</span></h3><span class="note"><span class="ko">강사 · 1년 · 교직필수 과목</span><span class="en">Lecturer · 1 year · required teacher-education courses</span></span></div>
+  </div>
+</div></section>
+
+<section id="career"><div class="in">
+  <h2><span class="ko">경력</span><span class="en">Career</span></h2>
+  <div class="rows">
+    <div class="row"><div class="when"><span class="ko">2025.11–현재</span><span class="en">Nov 2025–present</span></div><div class="what"><b><span class="ko">한동대학교 HI교육혁신원 교육혁신팀 전임연구원</span><span class="en">Researcher, HI Center for Educational Innovation, Handong Global University</span></b></div></div>
+    <div class="row"><div class="when"><span class="ko">재직 중</span><span class="en">Present</span></div><div class="what"><b><span class="ko">㈜더 리틀 피에이치디 킨더 대표</span><span class="en">CEO, The Little PhD Kinder Co., Ltd.</span></b><span><span class="ko">영어교육기관 운영, 프로젝트 기반 자기주도학습 프로그램 개발(특허 보유), 원격 수업 키트 개발</span><span class="en">Runs an English-medium early childhood institute; developed a patented project-based self-directed learning program and remote-class kits</span></span></div></div>
+    <div class="row"><div class="when"><span class="ko">2년 (–2025.10)</span><span class="en">2 years (to Oct 2025)</span></div><div class="what"><b><span class="ko">서울대학교 교육연구소 연구원</span><span class="en">Researcher, Education Research Institute, Seoul National University</span></b><span><span class="ko">교육부 연구과제 수행</span><span class="en">Ministry of Education research projects</span></span></div></div>
+    <div class="row"><div class="when"><span class="ko">2년</span><span class="en">2 years</span></div><div class="what"><b><span class="ko">서울대학교 학부모정책연구센터 연구원</span><span class="en">Researcher, Center for Parent Policy Research, Seoul National University</span></b><span><span class="ko">교육부 과제로 학부모 역량모형 개발</span><span class="en">Developed a parent competency model for the Ministry of Education</span></span></div></div>
+    <div class="row"><div class="when"><span class="ko">2년</span><span class="en">2 years</span></div><div class="what"><b><span class="ko">서울대학교 행복연구센터 연구원</span><span class="en">Researcher, Center for Happiness Studies, Seoul National University</span></b><span><span class="ko">행복아카이브 구축, 교사 행복대학 연수 프로그램 개발</span><span class="en">Built the happiness archive; developed a teacher training program</span></span></div></div>
+    <div class="row"><div class="when"><span class="ko">1년</span><span class="en">1 year</span></div><div class="what"><b><span class="ko">선덕고등학교 교사</span><span class="en">Teacher, Sunduk High School</span></b><span><span class="ko">가정, 수학</span><span class="en">Home economics, mathematics</span></span></div></div>
+  </div>
+  <p class="note"><span class="ko">그 밖에 ㈜대교와 협업한 아동 영어교육 프로그램 개발, 서울대학교 기술지주 자회사의 AI 학과적성 진단 검사 개발 자문을 수행했습니다.</span><span class="en">Also co-developed a children's English program with Daekyo and advised an SNU Holdings subsidiary on an AI-based major aptitude test.</span></p>
+</div></section>
+
+<section id="education" class="tint"><div class="in">
+  <h2><span class="ko">최종학력</span><span class="en">Education</span></h2>
+  <div class="card">
+    <h3><span class="ko">서울대학교 사범대학 협동과정 박사 (2020)</span><span class="en">Ph.D., Interdisciplinary Program, College of Education, Seoul National University (2020)</span></h3>
+    <span class="note"><span class="ko">가정교육/교육심리 · 학위논문: 초·중등학생의 친사회행동 발현을 위한 부모역량모형 개발</span><span class="en">Home economics education / educational psychology · Dissertation on a parent competency model for prosocial behavior in primary and secondary students</span></span>
+  </div>
+</div></section>
+
+<section id="credentials"><div class="in">
+  <h2><span class="ko">자격</span><span class="en">Credentials</span></h2>
+  <div class="tags">
+    <span><span class="ko">중등정교사 2급 (수학)</span><span class="en">Secondary teacher certificate (mathematics)</span></span>
+    <span><span class="ko">중등정교사 2급 (가정)</span><span class="en">Secondary teacher certificate (home economics)</span></span>
+  </div>
+</div></section>
+
+<footer><div class="in">© 2026 Yoon Young</div></footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('lang-toggle');
+  function set(l){root.setAttribute('data-lang',l);btn.textContent=l==='en'?'한국어':'English';try{localStorage.setItem('lang',l)}catch(e){}}
+  var saved='ko';try{saved=localStorage.getItem('lang')||'ko'}catch(e){}
+  set(saved);
+  btn.addEventListener('click',function(){set(root.getAttribute('data-lang')==='en'?'ko':'en')});
+  var cp=document.getElementById('copy-email'), em=document.getElementById('email');
+  cp.addEventListener('click',function(){
+    var done=function(){cp.textContent=root.getAttribute('data-lang')==='en'?'Copied':'복사됨'};
+    var sel=function(){var r=document.createRange();r.selectNodeContents(em);var s=getSelection();s.removeAllRanges();s.addRange(r)};
+    try{navigator.clipboard.writeText(em.textContent).then(done,sel)}catch(e){sel()}
+  });
+})();
+</script>
+</body>
+</html>
